@@ -1,0 +1,6 @@
+# settings.yaml
+# Minimal example configuration for the assistant stub
+
+assistant:
+  name: example-assistant
+  verbose: false
