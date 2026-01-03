@@ -1,21 +1,26 @@
-"""intent.py
-Detects intent and returns a confidence score.
-This is a placeholder implementation.
-"""
+# core/intent.py
 
-from typing import Dict
+def detect_intent(text):
+    text = text.lower()
+    scores = {
+        "CALCULATE": 0.0,
+        "OPEN_FILE": 0.0,
+        "GREETING": 0.0
+    }
 
+    if any(word in text for word in ["calculate", "add", "sum", "multiply", "calc"]):
+        scores["CALCULATE"] += 0.6
 
-def detect_intent(text: str) -> Dict[str, object]:
-    """Return a simple intent prediction for the stub project.
+    if any(char.isdigit() for char in text):
+        scores["CALCULATE"] += 0.3
 
-    For now, this function does a naive keyword check.
-    """
-    lowered = text.lower().strip()
-    if not lowered:
-        return {"name": "empty", "confidence": 0.0}
-    if "help" in lowered or "support" in lowered:
-        return {"name": "help_request", "confidence": 0.9}
-    if "calculate" in lowered or "math" in lowered:
-        return {"name": "calculation", "confidence": 0.8}
-    return {"name": "general", "confidence": 0.6}
+    if any(word in text for word in ["open", "file"]):
+        scores["OPEN_FILE"] += 0.7
+
+    if any(word in text for word in ["hi", "hello", "hey"]):
+        scores["GREETING"] += 0.8
+
+    intent = max(scores, key=scores.get)
+    confidence = scores[intent]
+
+    return intent, confidence

@@ -1,0 +1,8 @@
+{
+  "short_term": {},
+  "long_term": {},
+  "last_intent": "CALCULATE",
+  "last_entities": {
+    "expression": "add 10 and 3"
+  }
+}

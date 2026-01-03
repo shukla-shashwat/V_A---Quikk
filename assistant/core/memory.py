@@ -1,15 +1,21 @@
-"""memory.py
-Short and long term memory stubs.
-"""
+# core/memory.py
 
-from typing import List
+import json
 
-_short_term: List[str] = []
+MEMORY_FILE = "data/memory.json"
 
+def load_memory():
+    try:
+        with open(MEMORY_FILE, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
 
-def remember_short(item: str) -> None:
-    _short_term.append(item)
+def save_memory(memory):
+    with open(MEMORY_FILE, "w") as f:
+        json.dump(memory, f, indent=2)
 
-
-def recall_short() -> List[str]:
-    return list(_short_term)
+def update_memory(memory, intent, entities):
+    memory["last_intent"] = intent
+    memory["last_entities"] = entities
+    save_memory(memory)

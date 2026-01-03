@@ -1,12 +1,7 @@
-"""math_tools.py
-Small math helpers used by the assistant.
-"""
-from typing import Union
+# tools/math_tools.py
 
-
-def add(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
-    return a + b
-
-
-def multiply(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
-    return a * b
+def calculate(expression):
+    try:
+        return eval(expression)
+    except Exception:
+        return "Invalid expression"

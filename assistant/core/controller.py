@@ -1,21 +1,37 @@
-"""controller.py
-Brain switchboard: routes inputs to intent, clarifier, memory, tools and llm.
-This is a small, safe stub for initial project structure.
-"""
+# core/controller.py
 
-from typing import Any
+from core.intent import detect_intent
+from core.clarifier import clarify
+from core.memory import load_memory, update_memory
+from tools.math_tools import calculate
 
+CONFIDENCE_THRESHOLD = 0.6
 
-def handle_input(text: str) -> dict:
-    """Very small stub that demonstrates the controller API.
+memory = load_memory()
 
-    Returns a dict with keys: "intent", "response".
-    """
-    # Lazy imports to avoid circulars in the stub
-    from assistant.core import intent as intent_mod
+def handle_input(text):
+    intent, confidence = detect_intent(text)
 
-    detected = intent_mod.detect_intent(text)
-    return {
-        "intent": detected,
-        "response": f"Received input with intent '{detected.get('name')}'"
-    }
+    if confidence < CONFIDENCE_THRESHOLD:
+        return clarify(intent)
+
+    if intent == "CALCULATE":
+        expression = extract_expression(text)
+        if not expression:
+            return "What should I calculate?"
+
+        result = calculate(expression)
+        update_memory(memory, intent, {"expression": expression})
+        return f"Result: {result}"
+
+    if intent == "GREETING":
+        return "Hello."
+
+    return "I cannot handle that yet."
+
+def extract_expression(text):
+    # VERY basic version
+    for char in text:
+        if char.isdigit():
+            return text
+    return None
