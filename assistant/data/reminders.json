@@ -1,0 +1,10 @@
+{
+  "reminders": [],
+  "alarms": {
+    "alarm_1": {
+      "time": "14:15",
+      "label": "Alarm",
+      "triggered_today": true
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwikk ⚡</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Animated Background -->
+        <div class="bg-animation">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Qwikk</span>
+            </div>
+            <div class="status">
+                <span class="status-dot"></span>
+                <span class="status-text">Online</span>
+            </div>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome Message -->
+                <div class="message assistant">
+                    <div class="message-avatar">⚡</div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>yo! i'm <strong>Qwikk</strong> — your personal AI assistant 🚀</p>
+                            <p>just type what you need or hit the suggestions below ⬇️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions" id="quickActions">
+                <button class="quick-btn" data-cmd="open chrome">🌐 Chrome</button>
+                <button class="quick-btn" data-cmd="take a screenshot">📸 Screenshot</button>
+                <button class="quick-btn" data-cmd="volume up">🔊 Volume +</button>
+                <button class="quick-btn" data-cmd="system info">💻 System</button>
+                <button class="quick-btn" data-cmd="what time is it">⏰ Time</button>
+                <button class="quick-btn" data-cmd="help">❓ Help</button>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-container">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="commandInput" 
+                    placeholder="type something... ✨" 
+                    autocomplete="off"
+                    autofocus
+                >
+                <button class="send-btn" id="sendBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-hints">
+                <span>press <kbd>Enter</kbd> to send</span>
+                <span>•</span>
+                <span>try: "open spotify" or "set volume to 50"</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

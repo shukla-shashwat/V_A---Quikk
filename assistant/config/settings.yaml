@@ -1,6 +1,34 @@
 # settings.yaml
-# Minimal example configuration for the assistant stub
+# Configuration for Qwikk Assistant
 
 assistant:
-  name: example-assistant
+  name: Qwikk
   verbose: false
+
+# Screenshot settings
+screenshot:
+  save_path: "C:\\Users\\marshal\\OneDrive\\Pictures\\Screenshots\\Screenshots"
+
+# File search settings  
+file_search:
+  search_drives:
+    - "C:\\"
+    - "D:\\"
+  skip_folders:
+    - "Windows"
+    - "Program Files"
+    - "Program Files (x86)"
+    - "ProgramData"
+    - "$Recycle.Bin"
+    - "node_modules"
+    - "__pycache__"
+    - ".git"
+    - "venv"
+    - "AppData"
+  max_depth: 0
+  max_results: 20
+
+# Web server settings
+server:
+  host: "127.0.0.1"
+  port: 8000

@@ -1,8 +1,163 @@
 {
-  "short_term": {},
-  "long_term": {},
-  "last_intent": "CALCULATE",
+  "last_intent": "SET_TIMER",
   "last_entities": {
-    "expression": "add 10 and 3"
-  }
+    "duration": "5 seconds"
+  },
+  "last_response": "\u23f1\ufe0f Timer set for 5 second(s)",
+  "pending_clarification": null,
+  "conversation_turns": [
+    {
+      "timestamp": "2026-03-26T11:53:50.255481",
+      "intent": "SEARCH_FILE",
+      "entities": {
+        "target": "10th.pdf"
+      },
+      "response": "No files found matching '10th.pdf'"
+    },
+    {
+      "timestamp": "2026-03-26T11:53:55.234776",
+      "intent": "SEARCH_FILE",
+      "entities": {
+        "target": "10th.pdf"
+      },
+      "response": "No files found matching '10th.pdf'"
+    },
+    {
+      "timestamp": "2026-03-26T11:54:02.260598",
+      "intent": "OPEN_FILE",
+      "entities": {
+        "target": "10th.pdf"
+      },
+      "response": "Could not find or open: 10th.pdf"
+    },
+    {
+      "timestamp": "2026-03-26T11:54:12.233641",
+      "intent": "HELP",
+      "entities": {},
+      "response": "Here's what I can do:\n\n\ud83d\udcf1 Apps: \"open chrome\", \"close notepad\", \"open calculator\"\n\ud83d\udd0a Volume: \"volume up\", \"set volume to 50\", \"mute\"\n\u2600\ufe0f Brightness: \"brightness up\", \"set brightness to 70\"\n\ud83d\udcf8 Screenshot: "
+    },
+    {
+      "timestamp": "2026-03-26T11:55:10.636367",
+      "intent": "SEARCH_FILE",
+      "entities": {
+        "target": "report"
+      },
+      "response": "Found 10 file(s):\n  \u2022 Report.docx (C:\\Users\\marshal\\Desktop\\Report.docx)\n  \u2022 Report.pdf (C:\\Users\\marshal\\Desktop\\Report.pdf)\n  \u2022 mini report final complete sample.doc (C:\\Users\\marshal\\Desktop\\Additi"
+    },
+    {
+      "timestamp": "2026-03-26T11:58:11.536876",
+      "intent": "SEARCH_FILE",
+      "entities": {
+        "target": "iirs"
+      },
+      "response": "Found 2 file(s):\n  \u2022 iirs.jpeg (C:\\Users\\marshal\\Downloads\\iirs.jpeg)\n  \u2022 iirs.pdf (C:\\Users\\marshal\\Downloads\\iirs.pdf)"
+    },
+    {
+      "timestamp": "2026-03-26T12:14:03.424975",
+      "intent": "SEARCH_FILE",
+      "entities": {
+        "target": "10th.pdf"
+      },
+      "response": "Found 1 file(s):\n  \u2022 10th.pdf (D:\\college document\\10th.pdf)"
+    },
+    {
+      "timestamp": "2026-03-26T12:14:44.487473",
+      "intent": "OPEN_FILE",
+      "entities": {
+        "target": "12th.pdf"
+      },
+      "response": "Found and opened: 12th.pdf"
+    },
+    {
+      "timestamp": "2026-03-26T12:15:46.809853",
+      "intent": "SEARCH_FILE",
+      "entities": {
+        "target": "12th"
+      },
+      "response": "Found 2 file(s):\n  \u2022 12th.pdf (D:\\college document\\12th.pdf)\n  \u2022 pract_front_page_12th.docx (C:\\Users\\marshal\\OneDrive\\pract_front_page_12th.docx)"
+    },
+    {
+      "timestamp": "2026-03-26T12:58:16.968039",
+      "intent": "HELP",
+      "entities": {},
+      "response": "Here's what I can do:\n\n\ud83d\udcf1 Apps: \"open chrome\", \"close notepad\", \"open calculator\"\n\ud83d\udd0a Volume: \"volume up\", \"set volume to 50\", \"mute\"\n\u2600\ufe0f Brightness: \"brightness up\", \"set brightness to 70\"\n\ud83d\udcf8 Screenshot: "
+    },
+    {
+      "timestamp": "2026-03-26T15:21:50.104948",
+      "intent": "SYSTEM_INFO",
+      "entities": {},
+      "response": "CPU: 3.1% | RAM: 88.2% (5.2 GB/5.9 GB) | Battery: 100% (charging) | Disk: 87.7% used"
+    },
+    {
+      "timestamp": "2026-03-26T15:22:00.968296",
+      "intent": "WIFI_STATUS",
+      "entities": {},
+      "response": "\ud83d\udcf6 WiFi is connected to 'REC_NEW' (42% signal)"
+    },
+    {
+      "timestamp": "2026-03-26T15:22:07.269291",
+      "intent": "WIFI_ON",
+      "entities": {},
+      "response": "Failed to enable WiFi: "
+    },
+    {
+      "timestamp": "2026-03-26T15:53:38.483233",
+      "intent": "OPEN_APP",
+      "entities": {
+        "app_name": "notion",
+        "app_executable": "notion:"
+      },
+      "response": "Opened notion:"
+    },
+    {
+      "timestamp": "2026-03-26T15:53:52.708739",
+      "intent": "CLOSE_APP",
+      "entities": {
+        "app_name": "notion",
+        "app_executable": "notion:"
+      },
+      "response": "Closed 11 instance(s) of notion"
+    },
+    {
+      "timestamp": "2026-03-26T15:54:04.316506",
+      "intent": "OPEN_APP",
+      "entities": {
+        "app_name": "chrome",
+        "app_executable": "chrome"
+      },
+      "response": "Opened chrome"
+    },
+    {
+      "timestamp": "2026-03-26T15:54:21.329194",
+      "intent": "CLOSE_APP",
+      "entities": {
+        "app_name": "chrome",
+        "app_executable": "chrome"
+      },
+      "response": "Closed 27 instance(s) of chrome"
+    },
+    {
+      "timestamp": "2026-03-26T15:54:44.952179",
+      "intent": "SYSTEM_INFO",
+      "entities": {},
+      "response": "CPU: 0.0% | RAM: 76.7% (4.5 GB/5.9 GB) | Battery: 100% (charging) | Disk: 87.7% used"
+    },
+    {
+      "timestamp": "2026-03-26T15:56:23.550551",
+      "intent": "SYSTEM_INFO",
+      "entities": {},
+      "response": "CPU: 10.2% | RAM: 75.1% (4.4 GB/5.9 GB) | Battery: 100% (charging) | Disk: 87.7% used"
+    },
+    {
+      "timestamp": "2026-03-26T15:56:31.613075",
+      "intent": "SET_TIMER",
+      "entities": {
+        "duration": "5 seconds"
+      },
+      "response": "\u23f1\ufe0f Timer set for 5 second(s)"
+    }
+  ],
+  "session_start": "2026-03-26T11:34:18.360719",
+  "short_term": {},
+  "long_term": {}
 }

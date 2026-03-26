@@ -1,13 +1,38 @@
-json  
+# Core dependencies (standard library - no install needed)
+# json, os, re, typing, sys, datetime, pathlib, sqlite3
+# math, operator, subprocess, ctypes, platform, threading, queue
 
-os  
+# External dependencies - Install with: pip install -r requirement.txt
 
-re  
+# System control
+psutil>=5.9.0
+pycaw>=20230407
+screen-brightness-control>=0.22.0
+pyautogui>=0.9.54
+comtypes>=1.2.0
+Pillow>=10.0.0
 
-typing  
+# Configuration
+PyYAML>=6.0
 
-sys  
+# Web interface
+fastapi>=0.109.0
+uvicorn>=0.27.0
+websockets>=12.0
 
-datetime  
+# LLM integration (Ollama)
+requests>=2.31.0
 
-pathlib  
+# Voice - Text-to-Speech (offline)
+pyttsx3>=2.90
+
+# Voice - Speech-to-Text (offline)
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.13
+
+# Notifications (for timers/alarms/reminders)
+plyer>=2.1.0
+
+# Optional: Vosk for better offline STT (requires model download)
+# vosk>=0.3.45
+# win10toast>=0.9  # Alternative Windows notifications
