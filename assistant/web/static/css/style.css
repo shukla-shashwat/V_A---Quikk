@@ -158,6 +158,34 @@ body {
     color: var(--text-secondary);
 }
 
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.voice-select {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.voice-select:hover {
+    border-color: var(--accent-purple);
+}
+
+.voice-select:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 10px var(--glow-cyan);
+}
+
 /* Chat Container */
 .chat-container {
     flex: 1;
@@ -368,6 +396,47 @@ body {
     border-radius: 4px;
     border: 1px solid var(--border-color);
     font-family: inherit;
+}
+
+/* Voice Button */
+.voice-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.voice-btn:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+.voice-btn.listening {
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    border-color: var(--accent-pink);
+    color: white;
+    animation: voice-pulse 1s infinite;
+}
+
+@keyframes voice-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px 5px rgba(236, 72, 153, 0.3); }
+}
+
+.voice-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.voice-hint {
+    color: var(--accent-cyan);
 }
 
 /* Scrollbar */

@@ -1,160 +1,160 @@
 {
-  "last_intent": "SET_TIMER",
-  "last_entities": {
-    "duration": "5 seconds"
-  },
-  "last_response": "\u23f1\ufe0f Timer set for 5 second(s)",
+  "last_intent": "WIFI_LIST",
+  "last_entities": {},
+  "last_response": "\ud83d\udcf6 Available WiFi Networks:\n  \ud83d\udd12 DIRECT-DlDESKTOP-HIOSAS0msME (?)\n  \ud83d\udd13 REC_NEW (?)\n  \ud83d\udd12 68 (?)\n  \ud83d\udd12 (\u0192ST_\u0192ST)\u2039\u00acY (?)\n  \ud83d\udd12 POCO M6 Plus 5G (?)",
   "pending_clarification": null,
   "conversation_turns": [
     {
-      "timestamp": "2026-03-26T11:53:50.255481",
-      "intent": "SEARCH_FILE",
+      "timestamp": "2026-03-26T17:42:27.116029",
+      "intent": "OPEN_APP",
       "entities": {
-        "target": "10th.pdf"
+        "app_name": "notepad",
+        "app_executable": "notepad"
       },
-      "response": "No files found matching '10th.pdf'"
+      "response": "Opening notepad..."
     },
     {
-      "timestamp": "2026-03-26T11:53:55.234776",
-      "intent": "SEARCH_FILE",
+      "timestamp": "2026-03-26T17:43:01.676321",
+      "intent": "CLOSE_APP",
       "entities": {
-        "target": "10th.pdf"
+        "app_name": "notepad",
+        "app_executable": "notepad"
       },
-      "response": "No files found matching '10th.pdf'"
+      "response": "Closed 1 instance(s) of notepad"
     },
     {
-      "timestamp": "2026-03-26T11:54:02.260598",
-      "intent": "OPEN_FILE",
-      "entities": {
-        "target": "10th.pdf"
-      },
-      "response": "Could not find or open: 10th.pdf"
-    },
-    {
-      "timestamp": "2026-03-26T11:54:12.233641",
-      "intent": "HELP",
-      "entities": {},
-      "response": "Here's what I can do:\n\n\ud83d\udcf1 Apps: \"open chrome\", \"close notepad\", \"open calculator\"\n\ud83d\udd0a Volume: \"volume up\", \"set volume to 50\", \"mute\"\n\u2600\ufe0f Brightness: \"brightness up\", \"set brightness to 70\"\n\ud83d\udcf8 Screenshot: "
-    },
-    {
-      "timestamp": "2026-03-26T11:55:10.636367",
-      "intent": "SEARCH_FILE",
-      "entities": {
-        "target": "report"
-      },
-      "response": "Found 10 file(s):\n  \u2022 Report.docx (C:\\Users\\marshal\\Desktop\\Report.docx)\n  \u2022 Report.pdf (C:\\Users\\marshal\\Desktop\\Report.pdf)\n  \u2022 mini report final complete sample.doc (C:\\Users\\marshal\\Desktop\\Additi"
-    },
-    {
-      "timestamp": "2026-03-26T11:58:11.536876",
-      "intent": "SEARCH_FILE",
-      "entities": {
-        "target": "iirs"
-      },
-      "response": "Found 2 file(s):\n  \u2022 iirs.jpeg (C:\\Users\\marshal\\Downloads\\iirs.jpeg)\n  \u2022 iirs.pdf (C:\\Users\\marshal\\Downloads\\iirs.pdf)"
-    },
-    {
-      "timestamp": "2026-03-26T12:14:03.424975",
-      "intent": "SEARCH_FILE",
-      "entities": {
-        "target": "10th.pdf"
-      },
-      "response": "Found 1 file(s):\n  \u2022 10th.pdf (D:\\college document\\10th.pdf)"
-    },
-    {
-      "timestamp": "2026-03-26T12:14:44.487473",
-      "intent": "OPEN_FILE",
-      "entities": {
-        "target": "12th.pdf"
-      },
-      "response": "Found and opened: 12th.pdf"
-    },
-    {
-      "timestamp": "2026-03-26T12:15:46.809853",
-      "intent": "SEARCH_FILE",
-      "entities": {
-        "target": "12th"
-      },
-      "response": "Found 2 file(s):\n  \u2022 12th.pdf (D:\\college document\\12th.pdf)\n  \u2022 pract_front_page_12th.docx (C:\\Users\\marshal\\OneDrive\\pract_front_page_12th.docx)"
-    },
-    {
-      "timestamp": "2026-03-26T12:58:16.968039",
-      "intent": "HELP",
-      "entities": {},
-      "response": "Here's what I can do:\n\n\ud83d\udcf1 Apps: \"open chrome\", \"close notepad\", \"open calculator\"\n\ud83d\udd0a Volume: \"volume up\", \"set volume to 50\", \"mute\"\n\u2600\ufe0f Brightness: \"brightness up\", \"set brightness to 70\"\n\ud83d\udcf8 Screenshot: "
-    },
-    {
-      "timestamp": "2026-03-26T15:21:50.104948",
-      "intent": "SYSTEM_INFO",
-      "entities": {},
-      "response": "CPU: 3.1% | RAM: 88.2% (5.2 GB/5.9 GB) | Battery: 100% (charging) | Disk: 87.7% used"
-    },
-    {
-      "timestamp": "2026-03-26T15:22:00.968296",
+      "timestamp": "2026-03-26T17:43:12.481317",
       "intent": "WIFI_STATUS",
       "entities": {},
-      "response": "\ud83d\udcf6 WiFi is connected to 'REC_NEW' (42% signal)"
+      "response": "\ud83d\udcf6 WiFi is connected to 'REC_NEW' (46% signal)"
     },
     {
-      "timestamp": "2026-03-26T15:22:07.269291",
-      "intent": "WIFI_ON",
-      "entities": {},
-      "response": "Failed to enable WiFi: "
-    },
-    {
-      "timestamp": "2026-03-26T15:53:38.483233",
+      "timestamp": "2026-03-26T17:58:30.297988",
       "intent": "OPEN_APP",
       "entities": {
-        "app_name": "notion",
-        "app_executable": "notion:"
+        "app_name": "notepad",
+        "app_executable": "notepad"
       },
-      "response": "Opened notion:"
+      "response": "Opened notepad"
     },
     {
-      "timestamp": "2026-03-26T15:53:52.708739",
+      "timestamp": "2026-03-26T17:58:39.280597",
       "intent": "CLOSE_APP",
       "entities": {
-        "app_name": "notion",
-        "app_executable": "notion:"
+        "app_name": "notepad"
       },
-      "response": "Closed 11 instance(s) of notion"
+      "response": "Closed 2 instance(s) of notepad"
     },
     {
-      "timestamp": "2026-03-26T15:54:04.316506",
+      "timestamp": "2026-03-26T18:17:05.962752",
+      "intent": "SCREENSHOT",
+      "entities": {},
+      "response": "Screenshot saved to C:\\Users\\marshal\\OneDrive\\Pictures\\Screenshots\\Screenshots\\screenshot_20260326_181705.png"
+    },
+    {
+      "timestamp": "2026-03-26T18:17:11.641284",
       "intent": "OPEN_APP",
       "entities": {
-        "app_name": "chrome",
-        "app_executable": "chrome"
+        "app_name": "notepad",
+        "app_executable": "notepad"
       },
-      "response": "Opened chrome"
+      "response": "Opened notepad"
     },
     {
-      "timestamp": "2026-03-26T15:54:21.329194",
+      "timestamp": "2026-03-26T18:17:16.507504",
       "intent": "CLOSE_APP",
       "entities": {
-        "app_name": "chrome",
-        "app_executable": "chrome"
+        "app_name": "notepad",
+        "app_executable": "notepad"
       },
-      "response": "Closed 27 instance(s) of chrome"
+      "response": "Closed 1 instance(s) of notepad"
     },
     {
-      "timestamp": "2026-03-26T15:54:44.952179",
+      "timestamp": "2026-03-26T18:17:33.705964",
       "intent": "SYSTEM_INFO",
       "entities": {},
-      "response": "CPU: 0.0% | RAM: 76.7% (4.5 GB/5.9 GB) | Battery: 100% (charging) | Disk: 87.7% used"
+      "response": "CPU: 64.9% | RAM: 93.0% (5.4 GB/5.9 GB) | Battery: 100% (charging) | Disk: 87.8% used"
     },
     {
-      "timestamp": "2026-03-26T15:56:23.550551",
-      "intent": "SYSTEM_INFO",
-      "entities": {},
-      "response": "CPU: 10.2% | RAM: 75.1% (4.4 GB/5.9 GB) | Battery: 100% (charging) | Disk: 87.7% used"
-    },
-    {
-      "timestamp": "2026-03-26T15:56:31.613075",
-      "intent": "SET_TIMER",
+      "timestamp": "2026-03-26T18:18:11.340911",
+      "intent": "OPEN_FILE",
       "entities": {
-        "duration": "5 seconds"
+        "target": "suraksha set"
       },
-      "response": "\u23f1\ufe0f Timer set for 5 second(s)"
+      "response": "File not found: suraksha set"
+    },
+    {
+      "timestamp": "2026-03-26T18:18:25.263748",
+      "intent": "OPEN_FOLDER",
+      "entities": {
+        "target": "college document"
+      },
+      "response": "Opened D:\\college document"
+    },
+    {
+      "timestamp": "2026-03-26T18:18:39.441974",
+      "intent": "OPEN_FOLDER",
+      "entities": {
+        "target": "college document"
+      },
+      "response": "Opened D:\\college document"
+    },
+    {
+      "timestamp": "2026-03-26T18:33:35.043065",
+      "intent": "SCREENSHOT",
+      "entities": {},
+      "response": "Screenshot saved to C:\\Users\\marshal\\OneDrive\\Pictures\\Screenshots\\Screenshots\\screenshot_20260326_183334.png"
+    },
+    {
+      "timestamp": "2026-03-26T18:33:49.095893",
+      "intent": "OPEN_APP",
+      "entities": {
+        "app_name": "notepad",
+        "app_executable": "notepad"
+      },
+      "response": "Opened notepad"
+    },
+    {
+      "timestamp": "2026-03-26T18:34:09.715058",
+      "intent": "CLOSE_APP",
+      "entities": {
+        "app_name": "notepad",
+        "app_executable": "notepad"
+      },
+      "response": "Closed 1 instance(s) of notepad"
+    },
+    {
+      "timestamp": "2026-03-26T18:34:18.450556",
+      "intent": "SCREENSHOT",
+      "entities": {},
+      "response": "Screenshot saved to C:\\Users\\marshal\\OneDrive\\Pictures\\Screenshots\\Screenshots\\screenshot_20260326_183418.png"
+    },
+    {
+      "timestamp": "2026-03-26T18:35:00.023512",
+      "intent": "SCREENSHOT",
+      "entities": {},
+      "response": "Screenshot saved to C:\\Users\\marshal\\OneDrive\\Pictures\\Screenshots\\Screenshots\\screenshot_20260326_183459.png"
+    },
+    {
+      "timestamp": "2026-03-26T18:35:36.345144",
+      "intent": "OPEN_APP",
+      "entities": {
+        "app_name": "vs code",
+        "app_executable": "code"
+      },
+      "response": "Opened code"
+    },
+    {
+      "timestamp": "2026-03-26T18:37:16.603459",
+      "intent": "HELP",
+      "entities": {},
+      "response": "\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551                    QWIKK COMMAND GUIDE                       \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n\n\ud83d\udcf1 AP"
+    },
+    {
+      "timestamp": "2026-03-26T18:37:43.267022",
+      "intent": "WIFI_LIST",
+      "entities": {},
+      "response": "\ud83d\udcf6 Available WiFi Networks:\n  \ud83d\udd12 DIRECT-DlDESKTOP-HIOSAS0msME (?)\n  \ud83d\udd13 REC_NEW (?)\n  \ud83d\udd12 68 (?)\n  \ud83d\udd12 (\u0192ST_\u0192ST)\u2039\u00acY (?)\n  \ud83d\udd12 POCO M6 Plus 5G (?)"
     }
   ],
   "session_start": "2026-03-26T11:34:18.360719",

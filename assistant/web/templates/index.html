@@ -22,9 +22,14 @@
                 <span class="logo-icon">⚡</span>
                 <span class="logo-text">Qwikk</span>
             </div>
-            <div class="status">
-                <span class="status-dot"></span>
-                <span class="status-text">Online</span>
+            <div class="header-controls">
+                <select id="voiceSelect" class="voice-select" title="Choose voice">
+                    <option value="">Loading voices...</option>
+                </select>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
             </div>
         </header>
 
@@ -57,10 +62,18 @@
         <!-- Input Area -->
         <footer class="input-container">
             <div class="input-wrapper">
+                <button class="voice-btn" id="voiceBtn" title="Click to speak">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                        <line x1="12" y1="19" x2="12" y2="23"/>
+                        <line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                </button>
                 <input 
                     type="text" 
                     id="commandInput" 
-                    placeholder="type something... ✨" 
+                    placeholder="type or click 🎤 to speak..." 
                     autocomplete="off"
                     autofocus
                 >
@@ -73,7 +86,7 @@
             <div class="input-hints">
                 <span>press <kbd>Enter</kbd> to send</span>
                 <span>•</span>
-                <span>try: "open spotify" or "set volume to 50"</span>
+                <span class="voice-hint">🎤 voice enabled</span>
             </div>
         </footer>
     </div>

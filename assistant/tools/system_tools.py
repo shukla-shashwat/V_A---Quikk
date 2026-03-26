@@ -240,60 +240,28 @@ def open_application(app_name: str) -> Tuple[bool, str]:
         except Exception as e:
             return False, f"Failed to open {app_name}: {e}"
     
-    # Check if it's a known UWP app first
+    # Get executable name from known apps
+    executable = APP_PATHS.get(app_name_clean, app_name_clean)
+    
+    # Try simple start command first (fastest for most apps)
+    try:
+        subprocess.Popen(
+            f'start "" "{executable}"',
+            shell=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
+        )
+        return True, f"Opened {app_name}"
+    except Exception:
+        pass
+    
+    # If it's a known UWP app, try that
     if app_name_clean in UWP_APPS:
         success, msg = _try_uwp_launch(app_name_clean)
         if success:
             return success, msg
-        # If UWP launch fails, try regular method below
     
-    # Get executable name from known apps
-    executable = APP_PATHS.get(app_name_clean, app_name_clean)
-    
-    try:
-        # Try using start command (works for most desktop apps)
-        result = subprocess.run(
-            f'start "" "{executable}"',
-            shell=True,
-            capture_output=True,
-            timeout=5
-        )
-        
-        # Check if command seemed to work
-        if result.returncode == 0:
-            return True, f"Opened {app_name}"
-        
-        # If start failed, try UWP as fallback
-        success, msg = _try_uwp_launch(app_name_clean)
-        if success:
-            return success, msg
-            
-        # Try one more method - where.exe to find the app
-        where_result = subprocess.run(
-            f'where {executable}',
-            shell=True,
-            capture_output=True,
-            text=True,
-            timeout=5
-        )
-        
-        if where_result.returncode == 0 and where_result.stdout.strip():
-            # Found the executable path
-            exe_path = where_result.stdout.strip().split('\n')[0]
-            subprocess.Popen(exe_path, shell=True)
-            return True, f"Opened {app_name}"
-        
-        # Final fallback - try UWP with original name
-        return _try_uwp_launch(app_name)
-        
-    except subprocess.TimeoutExpired:
-        return True, f"Opening {app_name}..."
-    except Exception as e:
-        # Final attempt - try as UWP app
-        success, msg = _try_uwp_launch(app_name_clean)
-        if success:
-            return success, msg
-        return False, f"Application not found: {app_name}"
+    return False, f"Could not open {app_name}. App not found."
 
 
 def close_application(app_name: str) -> Tuple[bool, str]:

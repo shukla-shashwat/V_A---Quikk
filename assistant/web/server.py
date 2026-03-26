@@ -157,17 +157,27 @@ async def websocket_endpoint(websocket: WebSocket):
             except json.JSONDecodeError:
                 command = data
             
-            # Process command
-            response = handle_input(command)
+            # Process command with error handling
+            try:
+                response = handle_input(command)
+            except Exception as e:
+                response = f"Error processing command: {str(e)}"
+                print(f"❌ Error: {e}")
             
-            # Send response
-            await manager.send_message(json.dumps({
-                "type": "response",
-                "message": response,
-                "command": command
-            }), websocket)
+            # Send response immediately
+            try:
+                await manager.send_message(json.dumps({
+                    "type": "response",
+                    "message": response,
+                    "command": command
+                }), websocket)
+            except Exception as e:
+                print(f"❌ Failed to send response: {e}")
             
     except WebSocketDisconnect:
+        manager.disconnect(websocket)
+    except Exception as e:
+        print(f"❌ WebSocket error: {e}")
         manager.disconnect(websocket)
 
 
