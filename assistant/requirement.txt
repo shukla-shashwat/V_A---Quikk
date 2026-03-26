@@ -1,38 +1,72 @@
-# Core dependencies (standard library - no install needed)
-# json, os, re, typing, sys, datetime, pathlib, sqlite3
-# math, operator, subprocess, ctypes, platform, threading, queue
+# ==========================================
+# QWIKK ASSISTANT - DEPENDENCIES
+# ==========================================
+# Install with: pip install -r requirement.txt
+# ==========================================
 
-# External dependencies - Install with: pip install -r requirement.txt
+# ------------------------------------------
+# CORE - System Control (Required)
+# ------------------------------------------
+psutil>=5.9.0                    # CPU, RAM, battery, process management
+pycaw>=20230407                  # Windows volume control
+screen-brightness-control>=0.22.0  # Screen brightness
+pyautogui>=0.9.54                # Screenshot, mouse/keyboard automation
+comtypes>=1.2.0                  # Windows COM interface (for pycaw)
+Pillow>=10.0.0                   # Image processing (screenshots)
 
-# System control
-psutil>=5.9.0
-pycaw>=20230407
-screen-brightness-control>=0.22.0
-pyautogui>=0.9.54
-comtypes>=1.2.0
-Pillow>=10.0.0
+# ------------------------------------------
+# CONFIGURATION
+# ------------------------------------------
+PyYAML>=6.0                      # YAML config file support
 
-# Configuration
-PyYAML>=6.0
+# ------------------------------------------
+# WEB INTERFACE (run_web.py)
+# ------------------------------------------
+fastapi>=0.109.0                 # Web framework
+uvicorn>=0.27.0                  # ASGI server
+websockets>=12.0                 # Real-time communication
 
-# Web interface
-fastapi>=0.109.0
-uvicorn>=0.27.0
-websockets>=12.0
+# ------------------------------------------
+# VOICE - Text-to-Speech (run_voice.py, run_background.py)
+# ------------------------------------------
+pyttsx3>=2.90                    # Offline TTS engine
 
-# LLM integration (Ollama)
-requests>=2.31.0
+# ------------------------------------------
+# VOICE - Speech-to-Text (run_voice.py, run_background.py)
+# ------------------------------------------
+SpeechRecognition>=3.10.0        # Speech recognition
+PyAudio>=0.2.13                  # Microphone input
 
-# Voice - Text-to-Speech (offline)
-pyttsx3>=2.90
+# ------------------------------------------
+# BACKGROUND HOTKEY MODE (run_background.py)
+# ------------------------------------------
+keyboard>=0.13.5                 # Global hotkey support
 
-# Voice - Speech-to-Text (offline)
-SpeechRecognition>=3.10.0
-PyAudio>=0.2.13
+# ------------------------------------------
+# NOTIFICATIONS (Timers, Alarms, Reminders)
+# ------------------------------------------
+plyer>=2.1.0                     # Desktop notifications
 
-# Notifications (for timers/alarms/reminders)
-plyer>=2.1.0
+# ------------------------------------------
+# LLM INTEGRATION (Optional)
+# ------------------------------------------
+requests>=2.31.0                 # HTTP requests for Ollama
 
-# Optional: Vosk for better offline STT (requires model download)
-# vosk>=0.3.45
-# win10toast>=0.9  # Alternative Windows notifications
+# ------------------------------------------
+# OPTIONAL - Better Offline STT
+# ------------------------------------------
+# vosk>=0.3.45                   # Offline STT (requires model download)
+
+# ==========================================
+# INSTALLATION NOTES
+# ==========================================
+# 
+# If PyAudio fails to install:
+#   pip install pipwin
+#   pipwin install pyaudio
+#
+# For hotkey mode (run_background.py):
+#   - Run as Administrator
+#   - pip install keyboard
+#
+# ==========================================
